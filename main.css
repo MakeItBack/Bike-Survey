@@ -1,26 +1,37 @@
 body			{
 				font-family: 'Roboto', sans-serif;
-				background: darkgreen;
+				margin: 0;
 				}
 
-body::after 	{
-				content: "";
-				background: url(https://ilovebicycling.com/wp-content/uploads/2016/10/CycleCommuting.jpg);
-				opacity: 0.15;
+.background 	{
+				background: midnightblue;
+				position: relative;
+   				overflow: hidden;
+   				margin: 0;
+   				}
+
+.background::before {
+				content: ' ';
+				display: block;
+				position: fixed;
 				top: 0;
 				left: 0;
-				bottom: 0;
-				right: 0;
-				position: absolute;
-				z-index: -1;  
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				opacity: 0.3;
+				background: url(img/CycleCommuting.jpg);
 				background-repeat: no-repeat;
       			background-size: cover;
-				}
+      			background-position: 50% 0;
+			  	}
 
-#container		{margin: 40px auto;
+#container		{
+				margin: 40px auto;
 				max-width: 700px;
+				z-index: 2;
+				position: relative;
 				}
-
 
 #title-block	{
 				text-align: center;
@@ -28,7 +39,8 @@ body::after 	{
 				margin-bottom: 30px;
 				}
 
-h1				{font-size: 2.5em;
+h1				{
+				font-size: 2.5em;
 				font-weight: 400;
 				}
 
@@ -38,10 +50,14 @@ h1				{font-size: 2.5em;
 				}
 
 #form-block 	{
-				background: orange;
-				opacity: 0.8;
+				background: rgba(255,165,0,0.8);
 				border-radius: 8px;
 				padding: 40px 40px;
+				}
+
+#form-block p	{
+				font-size: 0.8em;
+				text-align: right;
 				}
 
 label			{
@@ -50,9 +66,9 @@ label			{
 				}
 
 input			{
-				width: 95%;
+				width: 98%;
 				display: block;
-				padding: 12px;
+				padding: 12px 0 12px 12px;
 				margin: 10px 0 20px 0;
 				border-radius: 8px;
 				border: none;
@@ -70,14 +86,16 @@ select			{
 				}
 
 textarea		{
-				width: 100%;
+				width: 95%;
 				height: 15vh;
 				display: block;
 				margin: 10px 0 30px 0;
 				border-radius: 8px;
 				border: none;
-				font-size: 1.2em;
+				font-size: 1em;
 				text-align: left;
+				padding: 15px;
+				font-family: 'Roboto';
 				}
 
 option			{
@@ -105,8 +123,18 @@ input[type="checkbox"] {
 				}
 
 input[type="submit"] {
+				background: #a84e05;
+				color: white;
+				padding: 15px 0;
+			/*	border: 1px solid midnightblue;*/
+				font-size: 1.2em;
+				}
+
+input[type="submit"]:hover {
 				background: darkgreen;
 				color: white;
 				padding: 15px 0;
+				/*border: 1px solid midnightblue;*/
 				font-size: 1.2em;
 				}
+

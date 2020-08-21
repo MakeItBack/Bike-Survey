@@ -1,4 +1,4 @@
-# Bike-Survey
+# Bike Survey
 **A responsive web form for a survey aimed at bike commuters.**<br>
 A project built as part of the Responsive Web Design course (freeCodeCamp).
 

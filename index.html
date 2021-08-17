@@ -1,110 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="icon" href="img/favicon.ico">
-	<title>Commuter Survey</title>
-</head>
-<body>
-	
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8" />
 
-<div class="background">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" type="text/css" href="main.css" />
+      <link rel="icon" href="img/favicon.ico" />
+      <title>Commuter Survey</title>
+   </head>
+   <body>
+      <div class="background">
+         <div id="container">
+            <header id="title-block">
+               <h1 id="title">Cycle Commuter Survey</h1>
+               <em
+                  ><p id="description">
+                     A short survey for people who travel to work by bike
+                  </p></em
+               >
+            </header>
 
-<div id="container">
-	<header id="title-block">
-		<h1 id="title">Cycle Commuter Survey</h1>
-		<em><p id="description">A short survey for people who travel to work by bike</p></em>
-	</header>
+            <div id="form-block">
+               <form id="survey-form">
+                  <p>Fields marked with * are required</p>
+                  <div class="form-control">
+                     <label id="name-label" for="name">Name*</label>
+                     <input
+                        id="name"
+                        type="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                     />
+                  </div>
 
-	<div id="form-block">
-		<form id="survey-form">
-			<p>Fields marked with * are required</p>
-			<div class="form-control">
-				<label id="name-label" for="name">Name*</label>
-				<input id="name" type="name" name="name" placeholder="Enter your name" required>
-			</div>
-			
-			<div>
-				<label id="email-label" for="email">Email*</label>			
-				<input id="email" type="email" name="email" placeholder="Enter your email address" required>
-			</div>
+                  <div>
+                     <label id="email-label" for="email">Email*</label>
+                     <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                     />
+                  </div>
 
-			<div>
-				<label id="number-label" for="number">How far is your daily commute?</label>
-				<input id="number" type="number" name="number" min="1" max="99" placeholder="Distance in km">
-			</div>
-			
-			<fieldset>
-				<legend>How often do you ride to work?</legend>
-				<div>
-					<input type="radio" id="radio1" name="radio-group" value="daily">
-					<label for="radio1">Every day</label>
-				</div>
-				<div>
-					<input type="radio" id="radio2" name="radio-group" value="weekly">
-					<label for="radio3">At least once a week</label>
-				</div>
-				<div>
-					<input type="radio" id="radio3" name="radio-group" value="monthly">
-					<label for="radio3">A few times a month</label>
-				</div>
-				<div>
-					<input type="radio" id="radio4" name="radio-group" value="Occasionally">
-					<label for="radio4">Occasionally</label>
-				</div>
-			</fieldset>
+                  <div>
+                     <label id="number-label" for="number"
+                        >How far is your daily commute?</label
+                     >
+                     <input
+                        id="number"
+                        type="number"
+                        name="number"
+                        min="1"
+                        max="99"
+                        placeholder="Distance in km"
+                     />
+                  </div>
 
-			<div>
-				<label id="dropdown-label" for="dropdown">Why do you commute by bike?</label>
-				<select name="motivation" id="dropdown">
-				    <option value="" disabled selected>Choose the best answer</option>
-				    <option value="health">For health and fitness</option>
-				    <option value="environment">It's better for the environment</option>
-				    <option value="money">To save money</option>
-				    <option value="enjoyment">For enjoyment</option>
-				    <option value="noChoice">There's no alternative</option>
-				    <option value="convenience">It's convenient</option>
-				</select>
-			</div>
+                  <fieldset>
+                     <legend>How often do you ride to work?</legend>
+                     <div>
+                        <input
+                           type="radio"
+                           id="radio1"
+                           name="radio-group"
+                           value="daily"
+                        />
+                        <label for="radio1">Every day</label>
+                     </div>
+                     <div>
+                        <input
+                           type="radio"
+                           id="radio2"
+                           name="radio-group"
+                           value="weekly"
+                        />
+                        <label for="radio3">At least once a week</label>
+                     </div>
+                     <div>
+                        <input
+                           type="radio"
+                           id="radio3"
+                           name="radio-group"
+                           value="monthly"
+                        />
+                        <label for="radio3">A few times a month</label>
+                     </div>
+                     <div>
+                        <input
+                           type="radio"
+                           id="radio4"
+                           name="radio-group"
+                           value="Occasionally"
+                        />
+                        <label for="radio4">Occasionally</label>
+                     </div>
+                  </fieldset>
 
-			<fieldset>
-				<legend>Other than commuting to work, do you use a bike for anything else?</legend>
-				
-				<div>
-					<input id="check1" type="checkbox" name="checkbox" value="local">
-					<label for="check1">Short local trips</label>
-				</div>
-				<div>
-					<input id="check2" type="checkbox" name="checkbox" value="comp">
-					<label for="check2">Competition</label><br>
-				</div>
-				<div>
-					<input id="check3" type="checkbox" name="checkbox" value="social">
-					<label for="check3">Social rides</label>
-				</div>
-				<div>
-					<input id="check4" type="checkbox" name="checkbox" value="fitness">
-					<label for="check4">Fitness</label>
-				</div>
-			</fieldset>
+                  <div>
+                     <label id="dropdown-label" for="dropdown"
+                        >Why do you commute by bike?</label
+                     >
+                     <select name="motivation" id="dropdown">
+                        <option value="" disabled selected>
+                           Choose the best answer
+                        </option>
+                        <option value="health">For health and fitness</option>
+                        <option value="environment">
+                           It's better for the environment
+                        </option>
+                        <option value="money">To save money</option>
+                        <option value="enjoyment">For enjoyment</option>
+                        <option value="noChoice">There's no alternative</option>
+                        <option value="convenience">It's convenient</option>
+                     </select>
+                  </div>
 
-			<div class="form-control">
-				<label for="comments">What could make your bike commute even better?</label>
-				<textarea id="comments" name="comments" placeholder="Your answer ......."></textarea>
-			</div>
+                  <fieldset>
+                     <legend>
+                        Other than commuting to work, do you use a bike for
+                        anything else?
+                     </legend>
 
-			<input id="submit" type="submit" name="button">
+                     <div>
+                        <input
+                           id="check1"
+                           type="checkbox"
+                           name="checkbox"
+                           value="local"
+                        />
+                        <label for="check1">Short local trips</label>
+                     </div>
+                     <div>
+                        <input
+                           id="check2"
+                           type="checkbox"
+                           name="checkbox"
+                           value="comp"
+                        />
+                        <label for="check2">Competition</label><br />
+                     </div>
+                     <div>
+                        <input
+                           id="check3"
+                           type="checkbox"
+                           name="checkbox"
+                           value="social"
+                        />
+                        <label for="check3">Social rides</label>
+                     </div>
+                     <div>
+                        <input
+                           id="check4"
+                           type="checkbox"
+                           name="checkbox"
+                           value="fitness"
+                        />
+                        <label for="check4">Fitness</label>
+                     </div>
+                  </fieldset>
 
-		</form>
-	</div>
+                  <div class="form-control">
+                     <label for="comments"
+                        >What could make your bike commute even better?</label
+                     >
+                     <textarea
+                        id="comments"
+                        name="comments"
+                        placeholder="Your answer ......."
+                     ></textarea>
+                  </div>
 
-</div>
-
-</div>
-</body>
+                  <input id="submit" type="submit" name="button" />
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
